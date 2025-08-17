@@ -17,6 +17,10 @@ desktop.ini
 *.njsproj
 *.sln
 *.sw?
+.env
+.env.*
+.vscode/
+vite.config.ts
 
 # ======== ASP.NET Core (Backend) ========
 bin/
@@ -24,6 +28,8 @@ obj/
 *.user
 PublishProfiles/
 ServiceDependencies/
+launchSettings.json
+appsettings.json
 .vs/
 
 # Logs
