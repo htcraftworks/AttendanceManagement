@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<BaseOutputPath>..\..\bin\</BaseOutputPath>
+		<DocumentationFile>..\..\bin\XML\$(MSBuildProjectName).xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="9.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Database\Accessor\Data.Accessor.csproj" />
+		<ProjectReference Include="..\..\Library\Library.csproj" />
+		<ProjectReference Include="..\Common\WebApiService.Common.Const.csproj" />
+		<ProjectReference Include="..\Resource\WebApiService.Resource.csproj" />
+	</ItemGroup>
+
+	<Target Name="EnsureXmlOutputPathExists" BeforeTargets="BeforeBuild">
+		<MakeDir Directories="..\..\bin\XML\" />
+	</Target>
+</Project>

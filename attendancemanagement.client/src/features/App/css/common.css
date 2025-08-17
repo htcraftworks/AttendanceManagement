@@ -1,0 +1,158 @@
+﻿/** テキストエリア */
+textarea {
+    resize: none;
+}
+
+/** テーブル全体の基本スタイル */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 6px;
+}
+
+/** カード */
+.card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+}
+
+    .card .card-body {
+        background-color: transparent;
+        padding: 20px 25px;
+    }
+
+/** フォームと広告ゾーン */
+.form_with_advert__zone {
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.4);
+    margin: 5em auto;
+}
+
+/** 広告セクション */
+.form_with_advert_advert__section,
+.form_with_advert_advert__section__reverse {
+    background-color: rgb(0, 128, 128);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+.form_with_advert_advert__section {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.form_with_advert_advert__section__reverse {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/** 入力セクション */
+.form_with_advert_input__section,
+.form_with_advert_input__section__reverse {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ccc;
+}
+
+.form_with_advert_input__section {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form_with_advert_input__section__reverse {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/** フォームタイトル */
+.form_with_advert_form__title {
+    padding: 0.5em 0 0;
+    color: rgb(31, 41, 55);
+}
+
+/** フォームグループ */
+.form_with_advert_form__group {
+    padding: 0 2em;
+}
+
+/** フォーム入力 */
+.form_with_advert_form__input {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    border-radius: 0;
+    padding: 0.5em 4em 0.4em 2em;
+    outline: none;
+    margin: 1.5em auto;
+    transition: all 0.5s ease;
+}
+
+/* ---------------- */
+/* ダークモード対応 */
+/* ---------------- */
+@media (prefers-color-scheme: dark) {
+    .card {
+        background-color: rgb(96, 96, 96);
+    }
+
+    .view__area {
+        color: rgb(255, 255, 255);
+        background-color: rgb(64, 64, 64);
+    }
+
+    .form_with_advert_input__section,
+    .form_with_advert_input__section__reverse {
+        background-color: rgb(215, 215, 215);
+    }
+}
+
+/* ---------------- */
+/* レスポンシブ対応 */
+/* ---------------- */
+/** 768px */
+@media screen and (max-width: 768px) {
+    a {
+        font-size: var(--font-size-md) !important;
+    }
+
+    .form_with_advert_form__title {
+        font-size: var(--font-size-md);
+    }
+}
+
+/** 641～800px */
+@media screen and (min-width: 641px) and (max-width: 800px) {
+    .form_with_advert__zone {
+        width: 70%;
+    }
+}
+
+/** 640px以下 */
+@media screen and (max-width: 640px) {
+    .form_with_advert__zone {
+        width: 90%;
+    }
+
+    .form_with_advert_advert__section,
+    .form_with_advert_advert__section__reverse {
+        display: none;
+    }
+
+    .form_with_advert_input__section {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+/** 540px以下 */
+@media screen and (max-width: 540px) {
+    a {
+        font-size: var(--font-size-sm) !important;
+    }
+}

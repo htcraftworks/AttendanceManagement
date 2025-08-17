@@ -1,0 +1,72 @@
+﻿.button__general .btn {
+    height: 100%;
+    width: 100%;
+    border: 2px dashed white;
+    box-shadow: 5px 5px 0 rgb(128, 128, 128);
+}
+
+    .button__general .btn:hover {
+        box-shadow: 0 0 0;
+        transition: 0.3s ease-in-out;
+        transform: translate(5px, 5px);
+        color: white;
+    }
+
+    .button__general .btn:disabled {
+        pointer-events: none;
+        background-color: rgb(128, 128, 128);
+        color: rgb(0, 0, 0);
+    }
+
+/** 色ごとの背景色 */
+.button__general .siann {
+    background-color: rgb(0, 191, 255);
+}
+
+    .button__general .siann:hover {
+        background-color: rgb(135, 206, 235);
+    }
+
+.button__general .green {
+    background-color: rgb(60, 179, 113);
+}
+
+    .button__general .green:hover {
+        background-color: rgb(102, 205, 170);
+    }
+
+.button__general .orange {
+    background-color: rgb(255, 140, 0);
+}
+
+    .button__general .orange:hover {
+        background-color: rgb(244, 164, 96);
+    }
+
+.button__general .red {
+    background-color: rgb(220, 20, 60);
+}
+
+    .button__general .red:hover {
+        background-color: rgb(219, 66, 96);
+    }
+
+
+/* ---------------- */
+/* レスポンシブ対応 */
+/* ---------------- */
+/** 768px */
+@media screen and (max-width: 768px) {
+    .button__general .btn {
+        font-size: var(--font-size-md);
+        height: 35px;
+    }
+}
+
+/** 540px以下 */
+@media screen and (max-width: 540px) {
+    .button__general .btn {
+        font-size: var(--font-size-sm);
+        height:30px;
+    }
+}

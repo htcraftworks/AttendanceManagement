@@ -1,0 +1,75 @@
+﻿/** メニューボタン */
+.menu_btn__unit {
+    transition: 0.5s;
+}
+
+@media (prefers-color-scheme: dark) {
+    .menu_btn__unit {
+        color: rgb(31, 41, 55);
+        background: rgb(215, 215, 215);
+    }
+}
+
+/** ホバー */
+.menu_btn__unit:hover .border-success {
+    border-color: var(--light) !important;
+}
+
+/** モーダル */
+.menu_btn__unit_overlay {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 250, 154, 0.3);
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu_btn__unit:hover .menu_btn__unit_overlay {
+    height: 100%;
+    opacity: 1;
+}
+
+/** メニュー画像 */
+.menu_btn__unit_img {
+    object-fit: contain;
+    max-height: 200px;
+    width: 100%;
+}
+
+/** メニューボタンタイトル */
+.menu_btn__unit_title h4 {
+    font-size: var(--font-size-base);
+}
+
+/* ---------------- */
+/* レスポンシブ対応 */
+/* ---------------- */
+
+/** 768px以下 */
+@media screen and (max-width: 768px) {
+    .menu_btn__unit_title h4 {
+        font-size: var(--font-size-md);
+    }
+
+    .menu_btn__unit_img {
+        max-height: 170px;
+    }
+}
+
+/** 540px以下 */
+@media screen and (max-width: 540px) {
+    .menu_btn__unit_title h4 {
+        font-size: var(--font-size-sm);
+    }
+
+    .menu_btn__unit_img {
+        max-height: 120px;
+    }
+}

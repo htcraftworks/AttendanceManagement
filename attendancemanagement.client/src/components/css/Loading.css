@@ -1,0 +1,41 @@
+﻿/** ローディング画面 */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+    /** スピナーサイズ調整 */
+    #loading .spinner {
+        width: 9rem;
+        height: 9rem;
+        font-size: 4rem;
+    }
+
+/* ---------------- */
+/* レスポンシブ対応 */
+/* ---------------- */
+/** 768px */
+@media screen and (max-width: 768px) {
+    #loading .spinner {
+        width: 7rem;
+        height: 7rem;
+        font-size: 3rem;
+    }
+}
+
+/** 540px以下 */
+@media screen and (max-width: 540px) {
+    #loading .spinner {
+        width: 5rem;
+        height: 5rem;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,29 @@
+﻿/** \nで改行有効 */
+.dialog-content {
+    white-space: pre-line;
+}
+
+/* ---------------- */
+/* レスポンシブ対応 */
+/* ---------------- */
+/** 768px */
+@media screen and (max-width: 768px) {
+    .MuiTypography-root {
+        font-size: var(--font-size-md) !important;
+    }
+
+    .MuiButton-root {
+        font-size: var(--font-size-md) !important;
+    }
+}
+
+/** 540px以下 */
+@media screen and (max-width: 540px) {
+    .MuiTypography-root {
+        font-size: var(--font-size-sm) !important;
+    }
+
+    .MuiButton-root {
+        font-size: var(--font-size-sm) !important;
+    }
+}

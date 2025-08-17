@@ -1,0 +1,32 @@
+﻿/* ---------------- */
+/* レスポンシブ対応 540px以下 */
+/* ---------------- */
+/** 768px */
+@media screen and (max-width: 768px) {
+    .hedder__area .title {
+        font-size: var(--font-size-lg);
+    }
+
+    .hedder__area #basic-navbar-nav {
+        font-size: var(--font-size-lg);
+    }
+
+        .hedder__area #basic-navbar-nav .dropdown-item {
+            font-size: var(--font-size-lg);
+        }
+}
+
+/** 540px以下 */
+@media screen and (max-width: 540px) {
+    .hedder__area .title {
+        font-size: var(--font-size-base);
+    }
+
+    .hedder__area #basic-navbar-nav {
+        font-size: var(--font-size-base);
+    }
+
+        .hedder__area #basic-navbar-nav .dropdown-item {
+            font-size: var(--font-size-base);
+        }
+}

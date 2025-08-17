@@ -1,0 +1,22 @@
+﻿.text_input_unit .form-control:focus {
+    border-bottom-color: rgb(0, 128, 128);
+    box-shadow: 0 0 5px rgba(0,80,80,.4);
+    border-radius: 4px;
+}
+
+/* ---------------- */
+/* レスポンシブ対応 */
+/* ---------------- */
+/** 768px */
+@media screen and (max-width: 768px) {
+    .text_input_unit, .text_input_unit .form-control, .text_input_unit .form-label {
+        font-size: var(--font-size-base);
+    }
+}
+
+/** 540px以下 */
+@media screen and (max-width: 540px) {
+    .text_input_unit, .text_input_unit .form-control, .text_input_unit .form-label {
+        font-size: var(--font-size-md);
+    }
+}

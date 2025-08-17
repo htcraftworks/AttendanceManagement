@@ -1,0 +1,112 @@
+﻿/** 検索条件 */
+.attendance_search_form_title {
+    white-space: nowrap;
+    font-size: var(--font-size-base);
+}
+
+/** テーブルベーススタイル */
+.attendance_list_table_header {
+    border-bottom: none;
+    background-color: rgb(0, 204, 153);
+}
+
+.attendance_list_table_header,
+.attendance_list_table_body_item,
+.attendance_list_table_body_history_item {
+    border-bottom: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px dashed #003300;
+}
+
+.attendance_list_table_body_history_items_row {
+    border-bottom: none;
+    background-color: rgb(255, 255, 224);
+}
+
+.attendance_list_table_body_items_row:hover {
+    background-color: rgb(204, 255, 204);
+}
+
+.attendance_list_table_body__group:nth-of-type(odd) {
+    background: rgb(215, 215, 215);
+}
+
+/** テーブルの角丸処理 */
+.attendance_list_table_header__group > .attendance_list_table_header:first-child {
+    border-top-left-radius: 0.25rem;
+}
+
+.attendance_list_table_header__group > .attendance_list_table_header:last-child {
+    border-top-right-radius: 0.25rem;
+}
+
+.attendance_list_table_body__group:last-of-type .attendance_list_table_body_items_row:last-of-type > .attendance_list_table_body_item:first-child,
+.attendance_list_table_body__group:last-of-type .attendance_list_table_body_history_items_row:last-of-type > .attendance_list_table_body_history_item:first-child {
+    border-bottom-left-radius: 0.25rem;
+}
+
+.attendance_list_table_body__group:last-of-type .attendance_list_table_body_items_row:last-of-type > .attendance_list_table_body_item:last-child,
+.attendance_list_table_body__group:last-of-type .attendance_list_table_body_history_items_row:last-of-type > .attendance_list_table_body_history_item:last-child {
+    border-bottom-right-radius: 0.25rem;
+}
+
+/* ---------------- */
+/* フォントサイズ適用 */
+.attendance_list_table_header__group,
+.attendance_list_table_body_items_row,
+.attendance_list_table_body_history_items_row {
+    font-size: var(--font-size-base);
+    padding: 0em;
+}
+
+/* ---------------- */
+/* レスポンシブ対応 */
+/* ---------------- */
+/** 768px以下 */
+@media screen and (max-width: 768px) {
+    .attendance_search_form_title {
+        font-size: var(--font-size-md);
+    }
+
+    .attendance_list_table_header__group,
+    .attendance_list_table_body_items_row,
+    .attendance_list_table_body_history_items_row {
+        font-size: var(--font-size-md);
+        padding: 0em;
+    }
+}
+
+/** 540px以下 */
+@media screen and (max-width: 540px) {
+    .attendance_search_form_title {
+        font-size: var(--font-size-sm);
+    }
+
+    .attendance_list_table_header__group,
+    .attendance_list_table_body_items_row,
+    .attendance_list_table_body_history_items_row {
+        font-size: var(--font-size-sm);
+        padding: 0em;
+    }
+
+        .attendance_list_table_header .vertical-item,
+        .attendance_list_table_body_items_row .vertical-item,
+        .attendance_list_table_body_history_items_row .vertical-item {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+}
+
+/* ---------------- */
+/* ダークモード対応 */
+/* ---------------- */
+@media (prefers-color-scheme: dark) {
+    .attendance_search_form_title {
+        color: rgb(255, 255, 255);
+    }
+
+    .attendance_list_table_body__group {
+        background: rgb(255, 255, 255);
+    }
+}

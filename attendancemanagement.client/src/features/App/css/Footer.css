@@ -1,0 +1,27 @@
+﻿/* ---------------- */
+/* ダークモード対応 */
+/* ---------------- */
+@media (prefers-color-scheme: dark) {
+    .footer__area {
+        color: rgb(255, 255, 255);
+        background-color: rgb(64, 64, 64);
+    }
+}
+
+
+/* ---------------- */
+/* レスポンシブ対応 */
+/* ---------------- */
+/** 768px */
+@media screen and (max-width: 768px) {
+    .footer__area p {
+        font-size: var(--font-size-md);
+    }
+}
+
+/** 540px以下 */
+@media screen and (max-width: 540px) {
+    .footer__area p {
+        font-size: var(--font-size-sm);
+    }
+}

@@ -1,0 +1,23 @@
+﻿/** ビュートタイトルユニット */
+.view_title__unit {
+    background-color: rgb(0, 128, 128);
+    color: rgb(255, 255, 255);
+}
+
+/* ---------------- */
+/* レスポンシブ対応 */
+/* ---------------- */
+
+/** 768px */
+@media screen and (max-width: 768px) {
+    .view_title__unit h4 {
+        font-size: var(--font-size-lg);
+    }
+}
+
+/** 540px以下 */
+@media screen and (max-width: 540px) {
+    .view_title__unit h4 {
+        font-size: var(--font-size-base);
+    }
+}

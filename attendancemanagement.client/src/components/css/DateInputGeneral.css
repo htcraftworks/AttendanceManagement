@@ -1,0 +1,80 @@
+﻿.react-datepicker__input-container input {
+    position: relative;
+    width: 100%;
+}
+
+/* popper全体にスタイルを適用 */
+.custom-datepicker-popper {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+    /* カレンダーと時間選択のラッパー */
+    .custom-datepicker-popper .react-datepicker {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* カレンダー */
+    .custom-datepicker-popper .react-datepicker__month-container {
+        width: 260px;
+    }
+
+    /* 時間 */
+    .custom-datepicker-popper .react-datepicker__time-container {
+        width: 90px;
+        border-left: 1px solid #ccc;
+    }
+
+    /* スクロール制限 */
+    .custom-datepicker-popper .react-datepicker__time {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+/* ---------------- */
+/* レスポンシブ対応 */
+/* ---------------- */
+/** 600px以下 */
+@media (max-width: 600px) {
+    .custom-datepicker-popper .react-datepicker {
+        flex-direction: column;
+    }
+
+    .custom-datepicker-popper .react-datepicker__month-container,
+    .custom-datepicker-popper .react-datepicker__time-container {
+        width: 100%;
+    }
+
+    .custom-datepicker-popper .react-datepicker__time-container {
+        border-left: none;
+        border-top: 1px solid #ccc;
+    }
+
+    .react-datepicker__day,
+    .react-datepicker__day-name,
+    .react-datepicker__header {
+        margin: 0;
+        padding: 0;
+    }
+
+    .react-datepicker__navigation--next {
+        right: 0 !important;
+    }
+
+    .react-datepicker__time,
+    .react-datepicker__time-list {
+        height: 80px !important;
+    }
+
+    .react-datepicker {
+        right: 15px !important;
+    }
+
+    .react-datepicker__time-box {
+        width: 200px !important;
+    }
+}

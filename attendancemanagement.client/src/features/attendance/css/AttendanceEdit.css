@@ -1,0 +1,80 @@
+﻿
+/** セルのスタイル */
+.attendance_list_table_body__group th {
+    border-bottom: none;
+    background-color: rgb(0, 204, 153);
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border: 1px dashed #003300;
+}
+
+.attendance_list_table_body__group td {
+    border: 1px dashed #003300;
+}
+
+/** パディング調整 */
+.attendance_edit_table_header,
+.attendance_edit_table_item,
+.attendance_edit_table_sub__header {
+    padding: 1rem !important;
+    font-size: var(--font-size-base);
+}
+
+/** テーブルの角丸処理 */
+.attendance_list_table_body__group tr:first-child th:first-child {
+    border-top-left-radius: 0.25rem;
+}
+
+.attendance_list_table_body__group tr:first-child td:last-child {
+    border-top-right-radius: 0.25rem;
+}
+
+.attendance_list_table_body__group tr:last-child th:first-child {
+    border-bottom-left-radius: 0.25rem;
+}
+
+.attendance_list_table_body__group tr:last-child td:last-child {
+    border-bottom-right-radius: 0.25rem;
+}
+
+/* ---------------- */
+/* レスポンシブ対応 */
+/* ---------------- */
+
+/** 768px以下 */
+@media screen and (max-width: 768px) {
+    .attendance_edit_table_header,
+    .attendance_edit_table_item,
+    .attendance_edit_table_sub__header {
+        padding: 1rem !important;
+        font-size: var(--font-size-md);
+    }
+
+        .attendance_edit_table_header .vertical-item,
+        .attendance_edit_table_sub__header .vertical-item,
+        .attendance_edit_table_item .vertical-item {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            width: 100%;
+        }
+}
+
+/** 540px以下 */
+@media screen and (max-width: 540px) {
+    .attendance_edit_table_header,
+    .attendance_edit_table_item,
+    .attendance_edit_table_sub__header {
+        padding: 0.4rem 0.1rem !important;
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* ---------------- */
+/* ダークモード対応 */
+/* ---------------- */
+@media (prefers-color-scheme: dark) {
+    .attendance_list_table_body__group th,
+    .attendance_list_table_body__group td {
+        background: rgb(215, 215, 215);
+    }
+}

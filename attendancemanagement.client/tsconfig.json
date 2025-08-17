@@ -1,0 +1,12 @@
+﻿/** コンパイル設定 */
+{
+  "files": [],
+  // Vite の設定ファイルを TypeScript で書くための設定を参照
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "lib": [ "WebWorker" ] // ここに lib を設定
+  }
+}

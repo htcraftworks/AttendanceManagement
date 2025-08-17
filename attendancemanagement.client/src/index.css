@@ -1,0 +1,32 @@
+﻿:root {
+    color-scheme: light dark;
+    color: rgb(33, 53, 71);
+    background-color: rgb(255, 255, 255);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    /* 文字サイズ変数 */
+    --font-size-xxl: 1.4rem;
+    --font-size-xl: 1.3rem;
+    --font-size-lg: 1.2rem;
+    --font-size-base: 1rem; /* ベース 16px相当 */
+    --font-size-md: 0.9rem; /* 768px以下 */
+    --font-size-sm: 0.65rem; /* 540px以下 */
+    /* カラー変数 */
+    --color-text-light: rgb(33, 53, 71);
+    --color-bg-light: rgb(255, 255, 255);
+    --color-text-dark: rgba(255, 255, 255, 0.87);
+    --color-bg-dark: rgb(36, 36, 36);
+}
+
+/* ダークモード */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color: var(--color-text-dark);
+        background-color: var(--color-bg-dark);
+    }
+}
+
+/* メインエリア */
+.main_area {
+    padding-top: 56px;
+}
