@@ -15,7 +15,6 @@ desktop.ini
 *.suo
 *.ntvs*
 *.njsproj
-*.sln
 *.sw?
 .env
 .env.*

@@ -7,7 +7,10 @@ ECHO ━━━━━━━━━━━━━━━━━━━━━━━
 
 ECHO binフォルダ
 ECHO objフォルダ
+ECHO distフォルダ
 ECHO TestResultsフォルダ
+ECHO PublishProfilesフォルダ
+ECHO ServiceDependenciesフォルダ
 ECHO node_modulesフォルダ
 ECHO .vsフォルダ (隠しフォルダ)
 
@@ -21,7 +24,7 @@ if "%InputData%" == "Y" (
 )
 
 :EXECUTE
-for /d /r %%a in ("bin", "obj", "node_modules", "TestResults", ".vs") do (
+for /d /r %%a in ("bin", "obj", "node_modules", "dist", "PublishProfiles", "ServiceDependencies", "TestResults", ".vs") do (
   if exist "%%a" (
     echo Delete: %%a
     if not "%%A" == "attendancemanagement.client\node_modules\vite\bin" (
